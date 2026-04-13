@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Menu | Delish Dine</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;}
+body{background:#111;color:#fff;}
+
+nav{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:18px 60px;background:#000;position:sticky;top:0;z-index:1000;
+}
+.logo{font-size:26px;font-weight:bold;letter-spacing:2px;color:#f4a261;}
+
+.section{padding:50px 60px;}
+.section h2{
+    font-size:36px;margin-bottom:25px;color:#f4a261;
+    border-left:6px solid #f4a261;padding-left:12px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:25px;
+}
+
+.card{
+    background:#1b1b1b;border-radius:12px;padding:15px;text-align:center;
+    transition:.3s;border:1px solid #333;
+}
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.6);
+}
+.card img{
+    width:100%;height:150px;object-fit:cover;border-radius:8px;margin-bottom:10px;
+}
+.card h4{margin:8px 0;font-size:18px;}
+.price{color:#f4a261;font-weight:bold;margin-bottom:8px;}
+
+button{
+    padding:8px 15px;border:none;border-radius:20px;
+    background:#f4a261;color:#fff;font-weight:bold;cursor:pointer;
+}
+button:hover{background:#e76f51;}
+
+.nav-links a{
+    margin-left:30px;color:orange;text-decoration:none;font-weight:600;
+}
+.nav-links a:hover{color:#f4a261;}
+
+/* ===== Modal ===== */
+.modal{
+    display:none;
+    position:fixed;
+    z-index:2000;
+    left:0; top:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.7);
+}
+.modal-content{
+    background:#fff;color:#000;
+    width:350px;padding:25px;border-radius:10px;
+    position:absolute;top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+.modal-content input{
+    width:60px;padding:5px;margin:10px 0;
+}
+.close{
+    float:right;font-size:22px;cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Delish Dine Menu</div>
+    <div class="nav-links">
+        <a href="landing_page.html">Home</a>
+        <a href="orders.html">orders</a>
+        <a href="book_table.html">book_table</a>
+    </div>
+</nav>
+
+
+ <!-- ===== Desserts ===== -->
+<div class="section">
+<h2>Desserts</h2>
+<div class="grid">
+<!-- 10 cards -->
+<div class="card"><img src="https://static-assets-prod.fnp.com/images/pr/s/v20221205202818/cream-drop-chocolate-cake-1-kg_1.jpg"><h4>Chocolate Cake</h4><div class="price">₹120</div><button>Order</button></div>
+<div class="card"><img src="https://delightfuladventures.com/wp-content/uploads/2024/09/vegan-vanilla-ice-cream-recipe.jpg"><h4>Vanilla Ice Cream</h4><div class="price">₹90</div><button>Order</button></div>
+<div class="card"><img src="https://www.shutterstock.com/image-photo/delicious-chocolate-brownies-drizzled-rich-600nw-2630747815.jpg"><h4>Brownie</h4><div class="price">₹110</div><button>Order</button></div>
+<div class="card"><img src="https://cdn.britannica.com/38/230838-050-D0173E79/doughnuts-donuts.jpg"><h4>Donut</h4><div class="price">₹80</div><button>Order</button></div>
+<div class="card"><img src="https://cdn.uengage.io/uploads/7175/image-624822-1748505974.jpeg"><h4>Pastry</h4><div class="price">₹100</div><button>Order</button></div>
+<div class="card"><img src="https://weikfield.com/wp-content/uploads/2024/08/Decadent-Chocolate-Custard-Pudding-with-Biscuit-Crumbs.jpg"><h4>Pudding</h4><div class="price">₹130</div><button>Order</button></div>
+<div class="card"><img src="https://media.istockphoto.com/id/909016772/photo/love-concept-cupcakes.jpg?s=612x612&w=0&k=20&c=8SL_LnuXHW0Z1q2GRk-WB8NCRY75Nf-oBODLAc3f7n8="><h4>Cupcake</h4><div class="price">₹70</div><button>Order</button></div>
+<div class="card"><img src="https://media.istockphoto.com/id/1035053764/photo/beautiful-cookies-assorted-close-up-background-horizontal-top-view.jpg?s=612x612&w=0&k=20&c=5blbYcRKIYxN3SFGnUxY4xB9PcEaScd4-HCmyiQvcew="><h4>Cookies</h4><div class="price">₹60</div><button>Order</button></div>
+<div class="card"><img src="https://b.zmtcdn.com/data/pictures/chains/0/18694900/9b7610445f151daaffda3acd3fcec90b.jpg"><h4>Waffle</h4><div class="price">₹140</div><button>Order</button></div>
+<div class="card"><img src="https://www.biggerbolderbaking.com/wp-content/uploads/2015/05/BBB71-Homemade-Ice-Cream-Milkshakes-Thumbnail-v.1.jpg"><h4>Milkshake</h4><div class="price">₹150</div><button>Order</button></div>
+</div>
+</div>
+
+<!-- ===== Cold Drinks ===== -->
+<div class="section">
+<h2>Cold Drinks</h2>
+<div class="grid">
+<div class="card"><img src="https://www.shutterstock.com/image-photo/lviv-ukraine-february-6-2026-600nw-2725335277.jpg"><h4>Coca Cola</h4><div class="price">₹40</div><button>Order</button></div>
+<div class="card"><img src="https://t4.ftcdn.net/jpg/01/87/21/31/360_F_187213110_p07ufUC42zVlcaijXRuFFYB4MKsWLgq1.jpg"><h4>Orange Juice</h4><div class="price">₹60</div><button>Order</button></div>
+<div class="card"><img src="https://media.istockphoto.com/id/1401150816/photo/two-glasses-of-lemonade-with-mint-and-lemons.jpg?s=612x612&w=0&k=20&c=LuuInHwGO11q3aBbAmyMy4JvZ3njV4R0IRE10klTLew="><h4>Lemonade</h4><div class="price">₹50</div><button>Order</button></div>
+<div class="card"><img src="https://s7ap1.scene7.com/is/image/itcportalprod/five-best-mocktails-with-lychee-juice?fmt=webp-alpha"><h4>Mocktail</h4><div class="price">₹90</div><button>Order</button></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEZT0au37nHLtCLmKUb60043jDZABnn69UYg&s"><h4>Smoothie</h4><div class="price">₹110</div><button>Order</button></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYaE2wNBprRkWdBRdVuVC0qeCNsK_6gvK6Eg&s"><h4>Sweet Lassi</h4><div class="price">₹70</div><button>Order</button></div>
+<div class="card"><img src="https://5.imimg.com/data5/SELLER/Default/2022/6/PW/LH/KF/49407825/buttermilk.jpg"><h4>Buttermilk</h4><div class="price">₹40</div><button>Order</button></div>
+<div class="card"><img src="https://t3.ftcdn.net/jpg/08/48/92/02/360_F_848920225_ShRI77tjoshBJ1y1wFHfbbZk1xkI0fhA.jpg"><h4>Iced Tea</h4><div class="price">₹80</div><button>Order</button></div>
+<div class="card"><img src="https://www.mygingergarlickitchen.com/wp-content/rich-markup-images/1x1/1x1-cold-coffee-recipe.jpg"><h4>Cold Coffee</h4><div class="price">₹120</div><button>Order</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnJ1aXQlMjBqdWljZXxlbnwwfHwwfHx8MA%3D%3D"><h4>Fruit Drink</h4><div class="price">₹65</div><button>Order</button></div>
+</div>
+</div>
+
+<!-- ===== Rice Items ===== -->
+<div class="section">
+<h2>Rice Items</h2>
+<div class="grid">
+<div class="card"><img src="https://www.shutterstock.com/image-photo/traditional-chicken-biryani-served-brass-600nw-2622739739.jpg"><h4>Chicken Biryani</h4><div class="price">₹220</div><button>Order</button></div>
+<div class="card"><img src="https://www.cookingcarnival.com/wp-content/uploads/2025/09/Vegetable-Dum-Biryani-5.jpg"><h4>Veg Biryani</h4><div class="price">₹180</div><button>Order</button></div>
+<div class="card"><img src="https://images.getrecipekit.com/20220904015448-veg-20fried-20rice.png?aspect_ratio=4:3&quality=90&"><h4>Fried Rice</h4><div class="price">₹160</div><button>Order</button></div>
+<div class="card"><img src="https://www.allrecipes.com/thmb/alHgkjuvAolyNqFAJfbOLH2JeoA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FranceCevallos_JeeraRice_Alternate-a0ef3c42b8e94ac38867d3e762262ab4.JPG"><h4>Jeera Rice</h4><div class="price">₹140</div><button>Order</button></div>
+<div class="card"><img src="https://www.indianveggiedelight.com/wp-content/uploads/2022/08/curd-rice-featured.jpg"><h4>Curd Rice</h4><div class="price">₹120</div><button>Order</button></div>
+<div class="card"><img src="https://www.indianveggiedelight.com/wp-content/uploads/2019/07/veg-pulao-featured-500x500.jpg"><h4>Veg Pulav</h4><div class="price">₹170</div><button>Order</button></div>
+<div class="card"><img src="https://t3.ftcdn.net/jpg/04/29/25/72/360_F_429257288_Vjw9XLVCg7AacMNgfvmM2uCBb5xZxZ0J.jpg"><h4>Lemon Rice</h4><div class="price">₹130</div><button>Order</button></div>
+<div class="card"><img src="https://static.toiimg.com/thumb/54673775.cms?width=1200&height=900"><h4>Tomato Rice</h4><div class="price">₹130</div><button>Order</button></div>
+<div class="card"><img src="https://greenbowl2soul.com/wp-content/uploads/2022/09/Paneer-fried-rice.jpg"><h4>Paneer Rice</h4><div class="price">₹190</div><button>Order</button></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5KDwNOZQfjeG1Gi0zoM_pHaau5RKtyutCag&s"><h4>Mushroom Rice</h4><div class="price">₹200</div><button>Order</button></div>
+</div>
+</div>
+
+<!-- ===== Fast Food ===== -->
+<div class="section">
+<h2>Fast Food</h2>
+<div class="grid">
+<div class="card"><img src="https://thumbs.dreamstime.com/b/tasty-burger-french-fries-fire-close-up-home-made-flames-137249900.jpg"><h4>Burger</h4><div class="price">₹120</div><button>Order</button></div>
+<div class="card"><img src="https://www.shutterstock.com/image-photo/closeup-hand-pulling-hot-pizza-260nw-2627517817.jpg"><h4>Pizza</h4><div class="price">₹250</div><button>Order</button></div>
+<div class="card"><img src="https://media.istockphoto.com/id/510482834/photo/sandwich-bread-tomato-lettuce-and-yellow-cheese.jpg?s=612x612&w=0&k=20&c=Q69t_vK73KXddedlvN4RmFcPL34mCwEqprJvbDTyOWo="><h4>Sandwich</h4><div class="price">₹90</div><button>Order</button></div>
+<div class="card"><img src="https://static.vecteezy.com/system/resources/thumbnails/039/655/363/small/ai-generated-freshly-fried-gourmet-french-fries-a-crunchy-and-unhealthy-snack-generated-by-ai-photo.jpg"><h4>French Fries</h4><div class="price">₹80</div><button>Order</button></div>
+<div class="card"><img src="https://potatorolls.com/wp-content/uploads/2020/10/Basic-Hot-Dogs.jpg"><h4>Hot Dog</h4><div class="price">₹100</div><button>Order</button></div>
+<div class="card"><img src="https://media.istockphoto.com/id/888366454/photo/chicken-wrap.jpg?s=612x612&w=0&k=20&c=smy2oTsWnDDDEaS_Rkn6Jj-7KXll4FlO_aYR9BoKcu0="><h4>Wrap</h4><div class="price">₹110</div><button>Order</button></div>
+<div class="card"><img src="https://media.istockphoto.com/id/1333647378/photo/homemade-american-soft-shell-beef-tacos.jpg?s=612x612&w=0&k=20&c=ZHhpFNbH_BO4MaXzmcKLjC4cPRptdXlp6IVUfs1sBEs="><h4>Taco</h4><div class="price">₹130</div><button>Order</button></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8QmnRyLKIOqyKHyqsjGr8DPltNiWrYMDGlA&s"><h4>Noodles</h4><div class="price">₹140</div><button>Order</button></div>
+<div class="card"><img src="https://png.pngtree.com/png-vector/20250513/ourmid/pngtree-bowl-of-tricolor-pasta-with-vegetables-and-basil-for-italian-food-png-image_16260167.png"><h4>Pasta</h4><div class="price">₹150</div><button>Order</button></div>
+<div class="card"><img src="https://img.freepik.com/free-photo/side-view-chicken-roll-grilled-chicken-lettuce-cucumber-tomato-mayo-pita_141793-4849.jpg?semt=ais_hybrid&w=740&q=80"><h4>Shawarma</h4><div class="price">₹160</div><button>Order</button></div>
+</div>
+</div>
+
+<!-- ===== Nutrition Food ===== -->
+<div class="section">
+<h2>Nutrition Food</h2>
+<div class="grid">
+<div class="card"><img src="https://getinspiredeveryday.com/wp-content/uploads/2022/02/Easy-Green-Salad-Get-Inspired-Everyday-7.jpg"><h4>Green Salad</h4><div class="price">₹90</div><button>Order</button></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMDU2bygA7hWhA41aBqnyP7UleUXD-UxXeig&s"><h4>Sprouts Bowl</h4><div class="price">₹80</div><button>Order</button></div>
+<div class="card"><img src="https://img.freepik.com/free-photo/mixed-assorted-fruits_74190-7057.jpg"><h4>Fruit Bowl</h4><div class="price">₹100</div><button>Order</button></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsMUuZMUBy6CxbTd4aMenC35Rt-RbimGElKQ&s"><h4>Oats Meal</h4><div class="price">₹70</div><button>Order</button></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc9AIvAc6dkD5GTVhVASi91F4Jc4n7AbOFhw&s"><h4>Avocado Toast</h4><div class="price">₹150</div><button>Order</button></div>
+<div class="card"><img src="https://img.freepik.com/free-photo/boiled-eggs-bowl-decorated-with-parsley-leaves_2829-8366.jpg?semt=ais_incoming&w=740&q=80"><h4>Boiled Eggs</h4><div class="price">₹60</div><button>Order</button></div>
+<div class="card"><img src="https://www.budgetbytes.com/wp-content/uploads/2025/01/Smoothie-Bowl-Overhead.jpg"><h4>Smoothie Bowl</h4><div class="price">₹140</div><button>Order</button></div>
+<div class="card"><img src="https://www.twopurplefigs.com/wp-content/uploads/2025/05/How-to-boil-corn-on-the-cob-9.jpg"><h4>Boiled Corn</h4><div class="price">₹50</div><button>Order</button></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVWKHa2Vf9FeH70gsR-6k6v5SSnrPdX-N3NA&s"><h4>Grilled Fish</h4><div class="price">₹220</div><button>Order</button></div>
+<div class="card"><img src="https://www.allrecipes.com/thmb/aPy_MqN4GgyO27vh98ns1pXaIWg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8499-Best-Chicken-Salad-DDMFS-3X4-11915-d36a5b98b1e041b3b48b62ecdfa6029e.jpg"><h4>Chicken Salad</h4><div class="price">₹200</div><button>Order</button></div>
+</div>
+</div>
+
+<!-- ===== Chapathi Items ===== -->
+<div class="section">
+<h2>Chapathi Items</h2>
+<div class="grid">
+<div class="card"><img src="https://i0.wp.com/smithakalluraya.com/wp-content/uploads/2015/06/kadai-paneer-recipe-1.jpg?resize=720%2C854&ssl=1"><h4>Chapathi & Curry</h4><div class="price">₹120</div><button>Order</button></div>
+<div class="card"><img src="https://pulses.org/images/com_yoorecipe/Dahl-Roti-Thali-Cafe.jpg"><h4>Roti & Dal</h4><div class="price">₹110</div><button>Order</button></div>
+<div class="card"><img src="https://www.shanazrafiq.com/wp-content/uploads/2016/03/2-DSC_0179.jpg"><h4>Aloo Paratha</h4><div class="price">₹90</div><button>Order</button></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSineD4Udti6PgE9k7JAcEdnVJjZij9f0q81w&s"><h4>Paneer Paratha</h4><div class="price">₹100</div><button>Order</button></div>
+<div class="card"><img src="https://dww3ueizok6z0.cloudfront.net/food/banner/9424-e9726eb08ed3474675650fcfdf95717dbab97505"><h4>Butter Roti</h4><div class="price">₹70</div><button>Order</button></div>
+<div class="card"><img src="https://foodess.com/wp-content/uploads/2023/02/Butter-Naan-3.jpg"><h4>Naan</h4><div class="price">₹60</div><button>Order</button></div>
+<div class="card"><img src="https://www.vegrecipesofindia.com/wp-content/uploads/2018/10/kulcha-recipe-1.jpg"><h4>Kulcha</h4><div class="price">₹80</div><button>Order</button></div>
+<div class="card"><img src="https://www.cookwithmanali.com/wp-content/uploads/2021/07/Tandoori-Roti.jpg"><h4>Tandoori Roti</h4><div class="price">₹75</div><button>Order</button></div>
+<div class="card"><img src="https://myfoodstory.com/wp-content/uploads/2022/08/Homemade-Lachha-Paratha-3-500x500.jpg"><h4>Lachha Paratha</h4><div class="price">₹95</div><button>Order</button></div>
+<div class="card"><img src="https://static.toiimg.com/thumb/64290244.cms?width=1200&height=900"><h4>Rumali Roti</h4><div class="price">₹85</div><button>Order</button></div>
+</div>
+</div>
+
+
+<!-- ===== Order Modal ===== -->
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="foodName"></h2>
+    <p>Price: ₹<span id="foodPrice"></span></p>
+    <label>Quantity:</label>
+    <input type="number" id="qty" value="1" min="1">
+    <br><br>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+</div>
+
+<script>
+// Attach click to ALL order buttons automatically
+document.addEventListener("DOMContentLoaded", function(){
+    document.querySelectorAll(".card button").forEach(btn=>{
+        btn.addEventListener("click", function(){
+            let card = this.closest(".card");
+            let name = card.querySelector("h4").innerText;
+            let price = card.querySelector(".price").innerText.replace("₹","");
+            openModal(name, price);
+        });
+    });
+});
+
+function openModal(name, price){
+    document.getElementById("foodName").innerText = name;
+    document.getElementById("foodPrice").innerText = price;
+    document.getElementById("orderModal").style.display = "block";
+}
+
+function closeModal(){
+    document.getElementById("orderModal").style.display = "none";
+}
+
+function addToCart(){
+    let name = document.getElementById("foodName").innerText;
+    let price = document.getElementById("foodPrice").innerText;
+    let qty = document.getElementById("qty").value;
+    alert(name + " added to cart\nQuantity: " + qty + "\nTotal: ₹" + (price*qty));
+    closeModal();
+}
+</script>
+
+</body>
+</html>

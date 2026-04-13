@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | Orders</title>
+<style>
+/* Reset */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;}
+
+/* Background image */
+body{
+    background-image: url("https://t4.ftcdn.net/jpg/02/03/75/01/360_F_203750178_Nt6y8s1MtZAA0bjDfkQgio2MJdjrUe7i.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Sidebar */
+.sidebar{
+    width:240px;
+    height:100vh;
+    background:#111;
+    color:#fff;
+    padding:25px 15px;
+    position:fixed;
+}
+.sidebar h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#f4a261;
+}
+.sidebar a{
+    display:block;
+    padding:12px 15px;
+    margin:10px 0;
+    color:#ddd;
+    text-decoration:none;
+    border-radius:6px;
+}
+.sidebar a:hover{
+    background:#f4a261;
+    color:#000;
+}
+
+/* Main area */
+.main{
+    margin-left:240px;
+    padding:30px;
+    width:100%;
+    min-height:100vh;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px);
+    color:#fff;
+}
+
+/* Header */
+.header{
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:20px;
+    color:#ffb347;
+}
+
+/* Table styling */
+table{
+    width:80%;
+    border-collapse:collapse;
+    background: rgba(0,0,0,0.6);
+    border-radius:10px;
+    overflow:hidden;
+    color:#fff;
+}
+th, td{
+    padding:14px 16px;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    text-align:left;
+}
+th{
+    background: rgba(255,179,71,0.9);
+    color:#000;
+}
+tr:hover{
+    background: rgba(255,255,255,0.08);
+}
+
+/* Action buttons */
+button{
+    padding:6px 12px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    background:#f4a261;
+    color:#000;
+    font-weight:bold;
+    transition:0.3s;
+}
+button:hover{
+    background:#e76f51;
+    color:#fff;
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Delish Dine</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="orders.html">Orders</a>
+    <a href="menu.html">Menu</a>
+    <a href="book_table.html">Book Table</a>
+</div>
+
+<!-- Main content -->
+<div class="main">
+    <div class="header">Orders</div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Items</th>
+                <th>Total Amount</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#101</td>
+                <td>John Doe</td>
+                <td>Chicken Biryani, Cold Coffee</td>
+                <td>₹260</td>
+                <td>Pending</td>
+                <td><button>Mark as Completed</button></td>
+            </tr>
+            <tr>
+                <td>#102</td>
+                <td>Jane Smith</td>
+                <td>Veg Biryani, Lemonade</td>
+                <td>₹230</td>
+                <td>Preparing</td>
+                <td><button>Mark as Completed</button></td>
+            </tr>
+            <tr>
+                <td>#103</td>
+                <td>Robert Johnson</td>
+                <td>Pizza, Milkshake</td>
+                <td>₹400</td>
+                <td>Delivered</td>
+                <td><button disabled>Completed</button></td>
+            </tr>
+            <tr>
+                <td>#104</td>
+                <td>Mary Williams</td>
+                <td>Chapathi & Curry, Green Salad</td>
+                <td>₹210</td>
+                <td>Pending</td>
+                <td><button>Mark as Completed</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

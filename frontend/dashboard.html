@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | Delish Dine</title>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background image */
+body{
+    background-image: url("https://t4.ftcdn.net/jpg/02/03/75/01/360_F_203750178_Nt6y8s1MtZAA0bjDfkQgio2MJdjrUe7i.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Sidebar (unchanged) */
+.sidebar{
+    width:240px;
+    height:100vh;
+    background:#111;
+    color:#fff;
+    padding:25px 15px;
+    position:fixed;
+}
+.sidebar h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#f4a261;
+}
+.sidebar a{
+    display:block;
+    padding:12px 15px;
+    margin:10px 0;
+    color:#ddd;
+    text-decoration:none;
+    border-radius:6px;
+}
+.sidebar a:hover{
+    background:#f4a261;
+    color:#000;
+}
+
+/* Main glass area */
+.main{
+    margin-left:240px;
+    padding:30px;
+    width:100%;
+    min-height:100vh;
+
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px);
+    color:#fff;
+}
+
+/* Header */
+.header{
+    font-size:26px;
+    margin-bottom:25px;
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin-bottom:30px;
+    width: 80%;
+}
+
+.card{
+    background: rgba(0,0,0,0.6);
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.5);
+    color:#fff;
+}
+.card h3{
+    margin-bottom:10px;
+    color:#ffb347;  
+}
+
+/* Table */
+table{
+    width:80%;
+    border-collapse:collapse;
+    background: rgba(0,0,0,0.6);
+    border-radius:10px;
+    overflow:hidden;
+    color:#fff;
+}
+th,td{
+    padding:12px 15px;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    text-align:left;
+}
+th{
+    background: rgba(255,179,71,0.9);
+    color:#000;
+}
+tr:hover{
+    background: rgba(255,255,255,0.08);
+}
+   
+  
+
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>Delish Dine</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="menu.html">Menu</a>
+    <a href="book_table.html">Bookings</a>
+    <a href="orders.html">Orders</a>
+    <a href="landing_page.html">Logout</a>
+</div>
+
+<div class="main">
+    <div class="header">Restaurant Dashboard</div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Total Orders</h3>
+            <p>152</p>
+        </div>
+        <div class="card">
+            <h3>Today Revenue</h3>
+            <p>₹12,450</p>
+        </div>
+        <div class="card">
+            <h3>Table Bookings</h3>
+            <p>18</p>
+        </div>
+        <div class="card">
+            <h3>Menu Items</h3>
+            <p>60</p>
+        </div>
+    </div>
+
+    <h2>Recent Orders</h2>
+    <table>
+        <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Item</th>
+            <th>Amount</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>#101</td>
+            <td>Firoz</td>
+            <td>Chicken Biryani</td>
+            <td>₹220</td>
+            <td>Delivered</td>
+        </tr>
+        <tr>
+            <td>#102</td>
+            <td>Anjali</td>
+            <td>Pizza</td>
+            <td>₹250</td>
+            <td>Preparing</td>
+        </tr>
+        <tr>
+            <td>#103</td>
+            <td>Rahul</td>
+            <td>Brownie</td>
+            <td>₹110</td>
+            <td>Delivered</td>
+        </tr>
+        <tr>
+            <td>#104</td>
+            <td>Sneha</td>
+            <td>Veg Biryani</td>
+            <td>₹180</td>
+            <td>Pending</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
